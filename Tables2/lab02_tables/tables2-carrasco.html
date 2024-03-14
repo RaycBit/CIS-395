@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Required meta tags on the head section -->
+<meta name="author" content="Raymundo Carrasco">
+<meta name="description" content="This is demonstrating the second Lab tables">
+<meta name="keywords" content="align, valign, colespan, rowspan">
+
+    <title>Carrasco</title>
+</head>
+<body>
+    <h1>Carrasco</h1>
+
+    <ol> <!--This is an ordered list-->
+        <li><a href="https://www.bmcc.cuny.edu/">BMCC</a></li>
+        <li><a href="https://www.cuny.edu/">CUNY</a></li>
+        <li><a href="https://ssologin.cuny.edu/cuny.html?bmctx=D59E04882DF4F80F0E4A64DD59167034&password=secure_string&contextType=external&OverrideRetryLimit=1&ChallengeRedirectMethod=GET&username=string&challenge_url=https%3A%2F%2Fssologin.cuny.edu%2Fcuny.html&request_id=240881906834302662&authn_try_count=0&locale=en_US&resource_url=https%253A%252F%252Fhome.cunyfirst.cuny.edu%252Fpsc%252Fcnyihprd%252FEMPLOYEE%252FEMPL%252Fc%252FNUI_FRAMEWORK.PT_LANDINGPAGE.GBL">CUNY First</a></li>
+    </ol>
+  
+    <ul> <!--This is an unordered list-->
+        <li><a href="https://store.steampowered.com/">Steam</a></li>
+        <li><a href="https://www.twitch.tv/">Twitch</a></li>
+        <li><a href="https://www.tiktok.com/explore">Tiktok</a></li>
+    </ul>
+
+    <p>This lab exercise continues Lab #2: Tables. This lab exercise demonstrates how align, valign,
+        colspan and rowspan work in HTML tables. The first 3 tables demonstrate how content is aligned
+        horizontally (left, center, right) and vertically (top, middle, bottom) in table cells. Table 4
+        demonstrates the use of colspan and rowspan to merge cells. Table 5 demonstrates how tables can
+        be used to create a "skeleton" for a web page's layout. </p>
+    
+        <table cellpadding= "10" width="500px" border="1"> <!--Table 1 consistent of cellpadding width and border-->
+        <caption align="bottom"><strong> Table 2-1:</strong><br />A simple 5x5 table with
+            cellpadding=10 and width=500. Expanding the width of the table allows you to see the default
+            left alignment in the table cells. </caption>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+            </tr>
+        </table>
+
+        <div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+
+        <table cellpadding= "10" width="500px" border="1"> <!--Table 2 consistent of adding content to cells 1 and 6 to see the middle vertical alignment-->
+            <caption align="bottom"><strong> Table 2-2:</strong><br />
+                Adding content to cells 1 and 6 allows you to see the default middle vertical alignment</caption>
+                <tr>
+                    <td>1<br/>2<br/>3 <br/>4<br/>5<br/>6 <br/>7<br/>8<br/>9 <br/>10</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                <tr>
+                    <td><img src="giraffe.jpeg" width="107" height="148" alt="3 giraffes" /></td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                </tr>
+            </table>
+
+            <div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+            <table cellpadding= "10" width="500px" border="1">
+                <caption align="bottom"><strong> Table 2-3:</strong><br/> <!--Table 3: The use of align and valign attributes--> 
+                    Demonstrating the use of the align and valign attributes.</caption>
+                    <tr>
+                        <td>1<br/>2<br/>3 <br/>4<br/>5<br/>6 <br/>7<br/>8<br/>9 <br/>10</td>
+                        <td>Default&nbsp;vertical&nbsp;alignment&nbsp;=&nbsp;middle;
+                            no&nbsp;valign&nbsp;attribute&nbsp;used&nbsp;in&nbsp;this&nbsp;cell</td>
+                        <td valign="top">3 valign="top"</td>
+                        <td valign="bottom">4 valign="bottom"</td>
+                        <td>5</td>
+                    <tr>
+                        <td><img src="giraffe.jpeg" width="107" height="148" alt="3 giraffes" /></td>
+                        <td>7 <br/> Default alignment = left;<br/> no align attribute used in this cell.<br/></td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td align="center">12 <br/> align="center"</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td align="right">17 <br/> align="right"</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                    </tr>
+                </table>
+
+            <div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+
+            <table cellpadding= "10" width="500px" border="1"> 
+                <caption align="bottom"><strong> Table 2-4:</strong><br/> <!--Table 4: Demonstrating the use of colespan and rowspan attributes.-->
+                    Demonstrating the use of the colspan and rowspan attributes.</caption>
+                    <tr>
+                        <td colspan="3">1 colspan="3"</td>
+                        <td>4</td>
+                        <td>5</td>
+                    <tr>
+                        <td rowspan="4">6 <br/> rowspan="4"</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td colspan="2" rowspan="3">9 <br/> colspan=2 and rowspan="3" together<br/> merge cells in 2 directions.</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                    
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                    </tr>
+                </table>
+
+            <div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+
+            <table border="1" align="center" width="95%">
+                <caption align="bottom"><strong> Table 2-5:</strong><br/> <!--Table 5: The use of both rowspan and colspan to create a web layout structure.-->
+                    Demonstrating the use of colspan and rowspan to create a web page layout structure. <br/>
+                    Normally, you'd have border=0; the border is made visible here for demonstration purposes only.</caption>
+                <tr>
+                    <td align="center" colspan="4"><h1>This is the Header</h1></td>
+                <tr>
+                    <td rowspan="2" valign="top"><h2>L NavBar</h2> 
+                        <ul> <!--This is an unordered list-->
+                            <li>Link 1</li>
+                            <li>Link 2</li>
+                            <li>Link 3</li>
+                            <li>Link 4</li>
+                            <li>Link 5</li>
+                    </ul>
+                </td>
+                    <td>Main Content Cell 1</td>
+                    <td>Main Content Cell 2</td>
+                    <td rowspan="2" valign="top">
+                        <h2>R NavBar</h2>
+                        <ul> <!--This is an unordered list-->
+                            <li>Link 6</li>
+                            <li>Link 7</li>
+                            <li>Link 8</li>
+                            <li>Link 9</li>
+                            <li>Link 10</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Main Content Cell 3</td>
+                    <td>Main Content Cell 4</td>
+
+                </tr>
+                <tr>
+                    <td colspan="4" align="center"><p>
+                    <footer><p>This is the footer, where'd you have your "Thanks, Cruzio" statement, links to the validators and your "Last Updated" statement.</p></footer>
+
+                </tr>
+            </table>
+            
+            <div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+
+
+        <footer style="text-align: center;"> <!--Footer Tag, for all the validators (HTML and CSS)-->
+            Validator -
+            <a href="https://validator.w3.org/#validate_by_input" target="_blank">HTML</a> | <a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">CSS</a>
+          </footer>
+          <hr>
+          <footer style="text-align: center;"> Last Updated: March 7rd, 2024 </footer>
+</body>
+</html>

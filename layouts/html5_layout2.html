@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Required meta tags on the head section -->
+    <meta name="author" content="Raymundo Carrasco" />
+    <meta name="description" content="The second kind of layout for HTML 5" />
+    <meta name="keywords" content="HTML 5, Tags" />
+
+    <title>HTML5 Layout</title>
+    <style>
+      div.container {
+        width: 100%;
+        border: none;
+        margin: auto;
+      }
+      header,
+      footer {
+        padding: 1em;
+        color: white;
+        background-color: lightgrey;
+        clear: left;
+        text-align: left;
+      }
+      nav {
+        float: right;
+        max-width: 160px;
+        height: 134px;
+        padding: 1em;
+        border: lightgrey;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      nav ul a {
+        text-decoration: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      article {
+        padding: 1em;
+        background-color: PapayaWhip;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>PROCESS LAYOUT EXAMPLE</h1>
+      </header>
+
+      <nav>
+        <h1>NAV</h1>
+        <ul>
+          <!-- Nav bar to link back to the main page-->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="layout_table.html">Table Layout</a></li>
+          <li><a href="layout_divisions.html">Divisions Layout</a></li>
+          <li><a href="layout_html5.html">HTML 5 Layout</a></li>
+        </ul>
+      </nav>
+
+      <article>
+        <h1>ARTICLE</h1>
+        <p>
+          Now we will create a layout using the following: header, nav, section,
+          article, aside, footer, details, summary, style, also there can be an
+          image: <img
+            src="https://thumbs.dreamstime.com/b/london-big-ben-houses-parliament-uk-49652572.jpg"
+            style="height: 100px"
+          />
+        </p>
+      </article>
+
+      <footer>
+        <a href="index.html">Home</a> /
+        <a href="layout_table.html">Table Layout</a> /
+        <a href="layout_divisions.html">Divisions Layout</a> /
+        <a href="layout_html5.html">HTML 5 Layout</a>
+      </footer>
+    </div>
+  </body>
+</html>

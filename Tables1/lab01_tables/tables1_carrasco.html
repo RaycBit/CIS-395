@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Required meta tags on the head section -->
+    <meta name="author" content="Raymundo Carrasco">
+    <meta name="description" content="This is the website to demonstrate several exercises of HTML tables.">
+    <meta name="keywords" content="Cellpaddng, Tables, Cellspacing">
+
+    <title>Carrasco</title>
+  </head>
+  <body>
+
+    <h1>Carrasco</h1>
+
+    <ol> <!--This is an ordered list-->
+      <li><a href="https://www.bmcc.cuny.edu/">BMCC</a></li>
+      <li><a href="https://www.cuny.edu/">CUNY</a></li>
+      <li><a href="https://ssologin.cuny.edu/cuny.html?bmctx=D59E04882DF4F80F0E4A64DD59167034&password=secure_string&contextType=external&OverrideRetryLimit=1&ChallengeRedirectMethod=GET&username=string&challenge_url=https%3A%2F%2Fssologin.cuny.edu%2Fcuny.html&request_id=240881906834302662&authn_try_count=0&locale=en_US&resource_url=https%253A%252F%252Fhome.cunyfirst.cuny.edu%252Fpsc%252Fcnyihprd%252FEMPLOYEE%252FEMPL%252Fc%252FNUI_FRAMEWORK.PT_LANDINGPAGE.GBL">CUNY First</a></li>
+  </ol>
+
+  <ul> <!--This is an unordered list-->
+      <li><a href="https://store.steampowered.com/">Steam</a></li>
+      <li><a href="https://www.twitch.tv/">Twitch</a></li>
+      <li><a href="https://www.tiktok.com/explore">Tiktok</a></li>
+  </ul>
+
+    <p>This exercise demonstrates several features of HTML tables. </p>
+    <p>The first three tables demonstrate basic table structure, including cellpadding, cellspacing, borders and caption. </p>
+
+    <table border="1"> <!--Table 1-->
+      <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+      </tr>
+      <tr>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+      </tr>
+      <tr>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+      </tr>
+      <tr>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+      </tr>
+  </table>
+
+  <div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+
+  <table border="1" cellpadding="15"> <!--Table 2 with the cellpadding 15 and the caption -->
+    <caption><strong>Table 2:</strong><br>A table with cellpadding="15"</caption>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+    </tr>
+</table>
+
+<div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+
+<table border="25" cellspacing="15"> <!--Table 3 with cellspacing "15", border "25" and the caption -->
+  <caption align="bottom"><strong>Table 3:</strong><br> A table with cellspacing="15" and border="25"</caption>
+  <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+  <tr>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+  </tr>
+  <tr>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+      <td>15</td>
+  </tr>
+  <tr>
+      <td>16</td>
+      <td>17</td>
+      <td>18</td>
+      <td>19</td>
+      <td>20</td>
+  </tr>
+  <tr>
+      <td>21</td>
+      <td>22</td>
+      <td>23</td>
+      <td>24</td>
+      <td>25</td>
+  </tr>
+</table>
+
+<div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+
+<p>Table 4 demonstrates an invisible table with border="0" and also the use of table headings. </p> <!-- Table 4 with an invisible border -->
+
+<div>
+  <h3 style="text-align: center">Animal Names in English and Spanish</h3> <!--Header centered for the table for animals -->
+</div>
+
+<table border="0" cellpadding="10">
+  <caption align="bottom"><strong> Table 4: </strong><br>Invisible table (border ="0") and use of table heading tags. </caption>
+  <tr>
+      <th>English</th>
+      <th>Cat</th>
+      <th>Dog</th>
+      <th>Giraffe</th>
+      <th>Parasite</th>
+  </tr>
+  <tr>
+      <th>Image</th> <!--images added onto the invisible table-->
+      <th><img src="cat.jpeg" alt="cat"></th>
+      <th><img src="dog.jpeg" alt="dog"></th>
+      <th><img src="giraffe.jpeg" alt="giraffe"></th>
+      <th><img src="parasite.jpeg" alt="parasite"></th>
+  </tr>
+  <tr>
+      <th>Espa&#0241;ol</th> <!--to create the special character &#0241;-->
+      <th>Gato</th>
+      <th>Pero</th>
+      <th>Jirafa</th>
+      <th>Par&#0225;sito</th> <!--To create the special character a acute (&#0225;)-->
+  </tr>
+</table>
+
+<div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+
+<p> The next four tables demonstrate the use of the width attribute, and the difference
+between fixed width tables that use the absolute unit of pixels, and variable width tables that
+use the relative unit of percent (%).</p>
+
+<table border="1" cellpadding="10" width="500"> <!--Table 5 with a fixed with table of 500px and the caption-->
+  <caption align="bottom"> <strong>Table 5: </strong><br>A fixed width table, width = 500 pixels</caption>
+  <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+  </tr>
+  <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+  </tr>
+</table>
+
+<div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+
+<table border="1" cellpadding="10" width="500"> <!--Table 6 with a fixed with table of 500px and the caption, while the first column is 250px-->
+  <caption align="bottom"> <strong>Table 6: </strong><br>Table width = 500 pixels, and first column has width = 250 pixels</caption>
+  <tr>
+      <td width="250">1</td>
+      <td>2</td>
+      <td>3</td>
+  </tr>
+  <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+  </tr>
+</table>
+
+<div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+
+<table border="1" cellpadding="10" width="60%"> <!--Table 7 with a fixed with table width of 60% and the caption-->
+  <caption align="bottom"> <strong>Table 7: </strong><br> Table width = 60% </caption>
+  <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+  </tr>
+  <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+  </tr>
+</table>
+
+<div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+
+<table border="1" cellpadding="10" width="60%"> <!--Table 8 with a fixed with table width of 60% and the first column has a width of 75%-->
+  <caption align="bottom"> <strong>Table 8: </strong><br> Table width = 60%, and first column has width = 75%
+  </caption>
+  <tr>
+      <td width="75%">1</td>
+      <td>2</td>
+      <td>3</td>
+  </tr>
+  <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+  </tr>
+</table>
+
+<div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+
+<table border="1" cellpadding="10" width="60%"> <!--Table 9 with a fixed with table width of 60% and the first column has a width of 150 px-->
+  <caption align="bottom"> <strong>Table 9: </strong><br> table width = 60%, and first column has fixed width of 150 pixels</caption>
+  <tr>
+      <td width="150">1</td>
+      <td>2</td>
+      <td>3</td>
+  </tr>
+  <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+  </tr>
+</table>
+
+<div>&nbsp;</div> <!-- Empty Div with a non-breaking space-->
+
+    <footer style="text-align: center;">
+      Validator -
+      <a href="https://validator.w3.org/#validate_by_input" target="_blank">HTML</a> | <a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">CSS</a>
+    </footer>
+    <hr>
+    <footer style="text-align: center;"> Last Updated: March 3rd, 2024 </footer>
+    
+  </body>
+</html>
