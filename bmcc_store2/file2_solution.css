@@ -1,0 +1,29 @@
+/*
+content="Raymundo Carrasco"
+content="file 2 external css solution"
+*/
+
+.label{
+    background-color:#DEDEE6;
+    border:4px solid black;
+}
+
+#button{
+    color:white;
+    background-color:black;
+    border:1px solid white;
+
+}
+
+th{
+    color:white;
+    background-color:black;
+    border:solid black 2px;
+    outline:solid black 2px;
+}
+table{
+    background-color:orange;
+    border:solid 
+    black 7px;
+    border-radius:25px;
+}
