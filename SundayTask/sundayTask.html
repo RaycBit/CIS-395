@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons</title>
+
+    <!-- Required meta tags on the head section -->
+    <meta name="author" content="Raymundo Carrasco" />
+    <meta
+      name="description"
+      content="Making a div disappear with a button and making a button disappear, both using js."
+    />
+    <meta name="keywords" content="if any" />
+  </head>
+  <body>
+    <div id="newpost">Testing</div>
+    <button id="button">Click</button>
+    <button id="click">Click Me</button>
+    <script>
+      var button = document.getElementById("button"); // This is for button 1
+      button.onclick = function () {
+        var div = document.getElementById("newpost"); // newpost is the id for the div
+        if (div.style.display !== "none") {
+          // using an if statement to make sure that the button is not invisible
+          div.style.display = "none"; //this would make the div turn invisible
+        }
+      };
+
+      var click = document.getElementById("click"); // This is for button 2
+      click.onclick = function () {
+        click = document.getElementById("click");
+        if (click.style.display !== "none") {
+          // using an if statement to make sure that the button is not invisible
+          click.style.display = "none"; //this would make the button turn invisible
+        }
+      };
+    </script>
+  </body>
+</html>
