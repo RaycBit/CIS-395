@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Required meta tags on the head section -->
+    <meta name="author" content="Raymundo Carrasco">
+    <meta name="description" content="A cookie Manager">
+
+    <title>Cookie Manager</title>
+    
+    <link rel="stylesheet" href="cookie.css">
+    <script src="cookie.js"></script>
+
+</head>
+<body>
+
+<div class="division" 
+    style="font-size:1.5em;text-align:center;
+           background:black; color:white;">
+   COOKIE MANAGER
+</div>
+<div class="division">
+   Name: <input id="cname" type="text" size="10">
+   Value: <input id="cvalue" type="text" size="10">
+   <input type="button" value="SetCookie" onClick="create();
+           details()" />
+   <input type="button" 
+          value="Clear" onClick="clearbox('cname');
+           clearbox('cvalue');" />
+</div>
+<div class="division">
+    Name: <input id="cname2" type="text" size="10">
+    Value: <input id="cvalue2" type="text" size="10">
+    <input type="button" 
+           value="GetCookie" 
+           onClick="findcookie()" />
+    <input type="button" 
+           value="Clear" onClick="clearbox('cname2');
+                                  clearbox('cvalue2');" />
+</div>
+<div class="division">
+    Name: <input id="cname3" type="text" size="10">
+    <input type="button" 
+           value="DelCookie" 
+           onClick="deleteCookie();details();"/>
+    <input type="button" 
+           value="Clear" 
+           onClick="clearbox('cname3');" />
+</div>
+<div class="division">
+    <input id="raw" 
+           type="text" 
+           size="50">
+    <input type="button" 
+           value="RawCookie" 
+           onClick="raw();details();"/>
+    <input type="button" 
+           value="Clear" 
+           onClick="clearbox('raw');"/>
+  </div>
+  <div id="info" class="division"></div>
+    
+</body>
+</html>

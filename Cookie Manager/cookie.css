@@ -1,0 +1,28 @@
+table,td,input[type="button"],input[type="text"] {
+    border:solid black 2px;
+    font-size:1.5em;
+}
+.division{
+    border:solid black 2px;
+    background-color:#cccccc;
+    margin: 2px; 
+    padding: 1px; 
+    font-size:small;
+}
+
+th{
+    text-align:center;
+    background:black; 
+    color:white; 
+    padding:4px;
+}
+
+div.v0{ 
+    width:100%;
+}
+
+div.v1{ 
+    width:50%; 
+    margin:0px auto; 
+    background-color: #eeeeee;
+}

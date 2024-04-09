@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Required meta tags on the head section -->
+    <meta name="author" content="Raymundo Carrasco">    
+    <meta name="description" content="an example of a Local Storage">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="storage.js"></script>
+    
+    <title>Local Storage</title>
+</head>
+<body onLoad="doShowAll()">
+
+    <h3>localStorage Manager</h3>
+<div id="PlayArea">
+<form id="ShoppingList">
+<table>
+  <tr>
+     <td>Name: <input type="text" name="name" /></td>
+     <td>Value: <input type="text" name="data" /></td>
+  </tr>
+  <tr>
+     <td align="center" colspan="2">
+        <input type="button" value="Save" onclick="SaveItem()">
+        <input type="button" value="Load/Modify" 
+               onclick="ModifyItem()">
+        <input type="button" id="removeBtn" value="Remove" 
+               onclick="RemoveItem()">
+     </td>
+  </tr>
+</table>
+</form>
+</div>
+
+<h4>Current localStorage</h4>
+<table id="list"
+       class="details"
+       border="1"
+       cellpadding="5px"></table>
+
+</body>
+</html>
