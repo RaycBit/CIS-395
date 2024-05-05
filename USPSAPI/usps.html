@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Required meta tags on the head section -->
+    <meta name="author" content="Raymundo Carrasco">
+    <meta name="description" content="Using the USPS Api to create a form using the zip code to print to the user with the city and state.">
+
+    <title>USPS API</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <form id="zipform">
+        <div class="row">
+            <div class="col col-md-5">
+                <div class="form-group">
+                    <label for="zip5">Zipcode (5 digits)</label>
+                    <input type="text" class="form-control" id="zip5" placeholder="Enter a zipcode" maxlength="5">
+                    <div id="invalid" class="invalid-feedback"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-5">
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="City" readonly>
+                    <div id="invalid" class="invalid-feedback"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-5">
+                <div class="form-group">
+                    <label for="zip5">State</label>
+                    <input type="text" class="form-control" id="state" placeholder="zipcode" readonly>
+                    <div id="invalid" class="invalid-feedback"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-5">
+                <button type="button" class="form-control btn btn-primary" onclick="loadXMLDoc()">Get City/State</button>
+            </div>
+        </div>
+</form>
+<script>
+    const userID = '540BMCC02238';
+    let zip5 = document.getElementById('zip5');
+    let city = document.getElementById('city');
+    let state = document.getElementById('state');
+    let invalid = document.getElementById('invalid');
+
+    const loadXMLDoc = function(){
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if(this.readyState == 4 && this.status == 200){
+                let address = {
+                    zip5: null,
+                    city: null,
+                    state: null,
+                    error: null
+                };
+
+                address = getXMLDoc(address, this.responseText)
+                city.value = address.city;
+                state.value = address.state;
+                invalid.innerHTML = address.error;
+
+                if(address.error == null){
+                    zip5.setAttribute('class','form-control');
+                }
+                else{
+                    zip5.setAttribute('class','form-control is-invalid');
+                }
+
+            }
+        };
+        xhttp.open('GET', createRequest(), true);
+        xhttp.send();
+    }
+
+    const createRequest = function(){
+        let req = 'https://secure.shippingapis.com/ShippingApi.dll?API=CityStateLookup&XML=';
+        req += '<CityStateLookupRequest USERID="' + userID + '">';
+        req += '<ZipCode ID="0">';
+        req += '<Zip5>' + zip5.value + '</Zip5>' ;
+        req += '</ZipCode>' ;
+        req += '</CityStateLookupRequest>' ;
+        return req;
+    };
+    const getXMLDoc = function(addr, res){
+        parser = new DOMParser();
+        xmlDoc = parser.parseFromString(res, "text/xml");
+        if(typeof(xmlDoc.getElementsByTagName("City")[0]) != 'undefined'){
+            addr.city = xmlDoc.getElementsByTagName("City")[0].childNodes[0].nodeValue;
+            addr.state = xmlDoc.getElementsByTagName("State")[0].childNodes[0].nodeValue;
+            addr.error = null;
+
+        }
+        else{
+            addr.city = null;
+            addr.state = null;
+            addr.error = xmlDoc.getElementsByTagName("Description")[0].childNodes[0].nodeValue;
+
+        }
+        return addr; 
+    };
+
+</script> 
+</body>
+</html>
