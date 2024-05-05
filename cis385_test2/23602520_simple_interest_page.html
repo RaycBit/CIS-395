@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- CIS385 Web Programming I Spring 2024 Sunday Section Test 2 Part 2 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags on the head section -->
+<meta name="author" content="Raymundo Carrasco">
+<meta name="description" content="interest page">
+    <title>Simple Interest Calculator</title>
+    <style>
+        .form_table {
+            color: white;
+            background-color: blue;
+            border: solid black 7px;
+            border-radius: 25px;
+        }
+
+
+        .title_class {
+            color: white;
+            background-color: black;
+            border: solid black 2px;
+            outline: solid black 2px;
+        }
+
+        .side_input {
+            background-color: #DEDEE6;
+            border: 4px solid red;
+        }
+
+        .area_input {
+            background-color: #DEDEE6;
+            border: 4px solid yellow;
+        }
+
+        .button_red {
+            color: white;
+            background-color: black;
+            border: 1px solid red;
+        }
+
+        .button_white {
+            color: white;
+            background-color: black;
+            border: 1px solid white;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .container1 {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        table {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 20px;
+            width: 400px;
+            height: 150px;
+        }
+
+        .red_input {
+            background-color: #DEDEE6;
+            border: 2px solid red;
+        }
+
+        .green_input {
+            background-color: #DEDEE6;
+            border: 2px solid green;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #calculator-box {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul style="margin-bottom: 20px;">
+        <li><a href="index.html">Main</a></li>
+        <li><a href="23602520_square_problem.html">Square Problem</a></li>
+        <li><a href="23602520_rectangle_problem.html">Rectangle Problem</a></li>
+        <li><a href="23602520_shipping_page.html">Shipping Page</a></li>
+        <li><a href="23602520_simple_interest_page.html">Simple Interest Calculator</a></li>
+        <li><a href="23602520_math_department.html">Math Department</a></li>
+    </ul>
+
+    <div class="container1">
+
+        <div id="calculator-box">
+            <h2>Simple Interest Calculator</h2>
+            <form>
+                <label for="principal">Principal Amount ($):</label>
+                <input type="number" id="principal" required>
+
+                <label for="rate">Interest Rate (%):</label>
+                <input type="number" id="rate" required>
+
+                <label for="time">Time (Years):</label>
+                <input type="number" id="time" required>
+
+                <br>
+                <button id="calculate-btn" type="button">Calculate Interest</button>
+            </form>
+
+            <div id="result"></div>
+
+        </div>
+
+        <pre>What is Simple Interest, A = P (1+rt)
+The rate at which you borrow or lend money is called the simple interest. 
+If a borrower takes money from a lender, an extra amount of money is paid back to the lender.
+The borrowed money which is given for a specific period is called the principal. 
+The extra amount which is paid back to the lender for using the money is called the interest.
+
+You calculate the simple interest by multiplying the principal amount by the number of periods and the interest rate. 
+Simple interest does not compound, and you don’t have to pay interest on interest. 
+In simple interest, the payment applies to the month’s interest, and the remainder of the payment will reduce the principal amount.            
+        </pre>
+        
+
+        <script src="style.js"></script>
+
+</body>
+</html>

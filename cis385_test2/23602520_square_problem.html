@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- CIS385 Web Programming I Spring 2024 Sunday Section Test 2 Part 2 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Problem</title>
+    <style>
+        .form_table {
+            color: white;
+            background-color: blue;
+            border: solid black 7px;
+            border-radius: 25px;
+        }
+
+
+        .title_class {
+            color: white;
+            background-color: black;
+            border: solid black 2px;
+            outline: solid black 2px;
+        }
+
+        .side_input {
+            background-color: #DEDEE6;
+            border: 4px solid red;
+        }
+
+        .area_input {
+            background-color: #DEDEE6;
+            border: 4px solid yellow;
+        }
+
+        .button_red {
+            color: white;
+            background-color: black;
+            border: 1px solid red;
+        }
+
+        .button_white {
+            color: white;
+            background-color: black;
+            border: 1px solid white;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul style="margin-bottom: 20px;">
+        <li><a href="index.html">Main</a></li>
+        <li><a href="23602520_square_problem.html">Square Problem</a></li>
+        <li><a href="23602520_rectangle_problem.html">Rectangle Problem</a></li>
+        <li><a href="23602520_shipping_page.html">Shipping Page</a></li>
+        <li><a href="23602520_simple_interest_page.html">Simple Interest Calculator</a></li>
+        <li><a href="23602520_math_department.html">Math Department</a></li>
+
+    </ul>
+
+    <div class="container">
+
+    <form>
+        <table class="form_table">
+            <tr>
+                <th colspan="2" class="title_class">SQUARE PROBLEM</th>
+            </tr>
+            <tr>
+                <td><label>Enter side:</label></td>
+                <td><input id="sideInput" type="text" class="side_input" /></td>
+            </tr>
+            <tr>
+                <td><label>Area:</label></td>
+                <td><input id="areaOutput" type="text" class="area_input" readonly /></td>
+            </tr>
+            <tr>
+                <td><label>Perimeter:</label></td>
+                <td><input id="perimeterOutput" type="text" class="area_input" readonly /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center">
+                        <input type="button" value="Area" class="button_red" id="areaButton">
+                        <input type="button" value="Perimeter" class="button_white" id="perimeterButton">
+                        <input type="button" value="Both" class="button_red" id="bothButton">
+                        <input type="button" value="Clear" class="button_white" id="clearButton">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+<script src="style.js"></script>
+</body>
+</html>
